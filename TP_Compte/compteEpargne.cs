@@ -2,14 +2,22 @@
 {
     internal class CompteEpargne : Compte
     {
-        public CompteEpargne(int solde) //Constructeur classe enfant ComptEpargne.
+        public CompteEpargne(float solde) //Constructeur classe enfant ComptEpargne.
             : base(solde)//Appel du constructeur classe parent Compte.
         {
             TauxInteret = 6;
         }
 
-        private int TauxInteret;
+        private float _TauxInteret;
 
-        public int TauxInteret1 { get => TauxInteret; set => TauxInteret = value; }
+        public float TauxInteret { get => _TauxInteret; set => _TauxInteret = value; }
+
+        public double CalculerInterets()
+        {
+            Sold += Sold * TauxInteret / 100f;
+            return Sold;
+        }
+
     }
+
 }
