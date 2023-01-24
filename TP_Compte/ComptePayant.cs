@@ -1,14 +1,16 @@
-﻿namespace TP_Compte
-{
-    internal class ComptePayant : Compte
-    {
+﻿namespace TP_Compte;
 
-        public ComptePayant(int solde)
-        : base(solde) { }
-        private int DH = 5;
-    }
+internal class ComptePayant : Compte
+{
+    public ComptePayant(int solde) : base(solde)
+    { int DH = 5; }
+
 
 }
+
+
+
+
 
 
 
